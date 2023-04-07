@@ -1,0 +1,31 @@
+{
+  "name": "goinsta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install && go mod tidy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill-others \"npm run start\" && \"npm run watch\"",
+    "start": "nodemon -L -e go,html,pug --exec go run main.go",
+    "watch": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarshelke1995/GoInstagram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagarshelke1995/GoInstagram/issues"
+  },
+  "homepage": "https://github.com/sagarshelke1995/GoInstagram#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.21",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2"
+  }
+}
